@@ -1,0 +1,143 @@
+<!-- 
+    Nama: Muh. Wira Ramdhani Fadhil
+    NIM : D121211049 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisection and False-position method</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Bracketing and Open Method</h1>
+    </header>
+
+    <section class="container">
+        <div class="border">
+            <p class="quest">
+                Program to determine the root of the following function using bracketing method (Bisection) and open method (Newton-Raphson and Secant)<br>
+            </p>
+            <p class="func">f(x) = 5 - 5x - e<sup>0.5x</sup></p>
+        </div>
+    </section>
+
+    <section class="calc-table">
+        <div>
+            <h3>Bracketing Method (Bisection)</h3>
+            <div>
+                <table class="user-guess">
+                    <tr>
+                        <td class="name">First Guess (xl)</td>
+                        <td><input id="xl" type="number" step="any" placeholder="0" required></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Second Guess (xu)</td>
+                        <td><input id="xu" type="number" step="any" placeholder="0" required></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Stopping Criterion (es)</td>
+                        <td><input id="es" type="number" step="any" placeholder="0" required></td>
+                        <td>%</td>
+                    </tr>
+                </table>
+            </div>
+            <button onclick="generateTableBsc()">Calculate</button>
+            <button class="clear" onclick="clearTable(1, 'result-bsc')">Clear</button>
+            <div class="check-req">
+                <div id="fx-value"></div>
+                <div id="message"></div>
+            </div>
+            <table class="bsc-table table-style">
+                <thead>
+                    <tr>
+                        <th class="iter">iteration</th>
+                        <th>xl</th>
+                        <th>f(xl)</th>
+                        <th>xu</th>
+                        <th>f(xu)</th>
+                        <th>xr</th>
+                        <th>f(xr)</th>
+                        <th>ea</th>
+                    </tr>
+                </thead>
+                <tbody id="tableDataBsc"></tbody>
+            </table>
+            <div id="result-bsc"></div>
+            <hr class="line">
+        </div>
+
+        <div>
+            <h3>Newton Raphson Method</h3>
+            <div>
+                <table class="user-guess">
+                    <tr>
+                        <td class="name">Initial Guess (x<sub>i</sub>)</td>
+                        <td><input id="xi" type="number" step="any" placeholder="0" required></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Stopping Criterion (es)</td>
+                        <td><input id="es2" type="number" step="any" placeholder="0" required></td>
+                        <td>%</td>
+                    </tr>
+                </table>
+            </div>
+            <button onclick="generateTableNwt()">Calculate</button>
+            <button class="clear" onclick="clearTable(2, 'result-nwt')">Clear</button>
+            <table class="nwt-table table-style">
+                <thead>
+                    <tr>
+                        <th class="iter">iteration</th>
+                        <th>xi</th>
+                        <th>ea</th>
+                    </tr>
+                </thead>
+                <tbody id="tableDataNwt"></tbody>
+            </table>
+            <div id="result-nwt"></div>
+            <hr class="line">
+        </div>
+
+        <div>
+            <h3>Secant Method</h3>
+            <div>
+                <table class="user-guess">
+                    <tr>
+                        <td class="name">Initial Guess 1 (x<sub>-1</sub>)</td>
+                        <td><input id="x-1" type="number" step="any" placeholder="0" required></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Initial Guess 2 (x<sub>i</sub>)</td>
+                        <td><input id="xi_" type="number" step="any" placeholder="0" required></td>
+                    </tr>
+                    <tr>
+                        <td class="name">Stopping Criterion (es)</td>
+                        <td><input id="es3" type="number" step="any" placeholder="0" required></td>
+                        <td>%</td>
+                    </tr>
+                </table>
+            </div>
+            <button onclick="generateTableSct()">Calculate</button>
+            <button class="clear" onclick="clearTable(3, 'result-sct')">Clear</button>
+            <table class="sct-table table-style">
+                <thead>
+                    <tr>
+                        <th class="iter">iteration</th>
+                        <th>xi</th>
+                        <th>ea</th>
+                    </tr>
+                </thead>
+                <tbody id="tableDataSct"></tbody>
+            </table>
+            <div id="result-sct"></div>
+            <hr class="line">
+        </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

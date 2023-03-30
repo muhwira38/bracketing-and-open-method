@@ -1,0 +1,220 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f3f3f3;
+}
+
+.header{
+    background-color:gray;
+    padding: 6px;
+    border-bottom: 1px solid #e5e5e5;
+    color: white;
+    padding-left: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.quest { 
+    color: #141515;
+    font-size: 18px; 
+    font-weight: 500; 
+    line-height: 32px;  
+}
+
+.func {
+    color: #2CA4B0; 
+    font-family: 'Oleo Script', cursive; 
+    font-size: 22px; 
+    font-weight: normal; 
+    line-height: 32px;
+    text-shadow: 1px 0 0 #fff;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.user-guess {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.name {
+    width: 170px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.border {
+    border: 2px dashed #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 70px;
+}
+
+button {
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    line-height: 1.2rem;
+    font-weight: 500;
+    background: #007a5a;
+    padding: 8px 14px 9px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #fff;
+    height: 34px;
+    transition: all 75ms ease-in-out;
+}
+
+button:hover{
+    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+}
+
+.clear {
+    background-color: rgb(210, 16, 16);
+}
+
+.check-req {
+    margin-top: 18px;
+    margin-left: 8px;
+}
+
+.check-req p {
+    font-size: 15px;
+    font-weight: unset;
+    color: rgb(35, 147, 153);
+    line-height: 8px;
+}
+
+#fx-value p {
+    margin-left: 3px;
+}
+
+.calc-table {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+
+}
+
+.table-style {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.table-style thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table-style th,
+.table-style td {
+    padding: 12px 15px;
+    align-items: center;
+}
+
+.table-style tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-style tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-style tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table-style tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.iter {
+    width: 10px;
+}
+
+#result-bsc p,
+#result-nwt p,
+#result-sct p {
+    color: rgb(35, 147, 153);
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-left: 13px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.line {
+    border-color: cadetblue;
+    border-width: 1px;
+    width: auto;
+    margin-top: 20px;
+}
+
+input {
+    width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .quest {
+        font-size: 14px;
+    }
+
+    .func {
+        font-size: 16px;
+    }
+    
+    .border {
+        padding: 10px 20px;
+    }
+
+    .user-guess {
+        font-size: 14px;
+    }
+
+    .name {
+        width: 150px;
+    }
+
+    .check-req p {
+        font-size: 13px;
+    }
+
+}
